@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= fname + lname + "Socians | Profile"
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous")
+        link(rel="stylesheet", href="./css/homestyle.css")
+    body.bg-light.container-fluid.text-center.my-5   
+        h1= "Welcome " + fname + " " + lname 
+        p= email 
+        p= "Account Created on: " + create 
+        p= "Account Last Updated at: " + update
+        <a href='/user/signout'><button class="btn btn-outline-primary buttonsnav btn-lg">log-out</button></a>
+        a(href="/user/del?id="+ id).btn.btn-outline-danger.buttonsnav.btn-lg.mx-3 Delete Account  
+        //- <a href='/user/signout?id='><button class="btn btn-outline-danger buttonsnav btn-lg">log-out</button></a>

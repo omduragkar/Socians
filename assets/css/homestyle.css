@@ -1,0 +1,55 @@
+#sociansnav
+{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.sociansearch
+{
+    width:fit-content;
+    font-size: larger;
+
+}
+.sociansform
+{
+    width:90%;
+    margin: 0% 2%;
+    margin-top: 8px;
+    font-size: large;
+}
+.buttonsnav
+{
+    width: 43%;
+    margin-left: 5%;
+    margin-top: 8px;
+}
+.searchbtn
+{
+    margin-top: 8px;
+}
+.searchbtn:hover
+{
+    cursor:not-allowed;
+}
+.header
+{
+    font-size: 50px;
+    font-weight: bolder;
+    margin: auto;
+}
+.footeri
+{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:3rem;
+    margin: 0px;
+}
+@media screen and (max-width:572px){
+    .footeri
+    {
+        position: relative;
+        width: 100%;
+        margin: 0px;
+    }
+    
+}

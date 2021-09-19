@@ -1,0 +1,75 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Sign-in | Socians
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous")
+
+    body.bg-light 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Socians<sup>&reg;</sup></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="newadd1" aria-current="page" href="#">Code</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item disabled" href="#">Under Construction</a></li>
+                                <li>
+                                    <hr class="dropdown-divider disabled">
+                                </li>
+                                <li><a class="dropdown-item active" href="/rate">Rate Us</a></li>
+                            </ul>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+        </nav>
+        h1.text-center.m-4.text-lg.text-bolder Lets Get you in the world of Socians Family: 
+            //- <label for="fname" class="my-3 mx-auto">First-Name:</label><br>
+            form(action="/user/create", method="post").mx-auto.my-5.text-center
+                table.text-center.mx-auto.me-auto
+                    <tr>
+                        <td><label style="font-size:xx-large; margin-right: 4.7%; text-align: center;">First Name: </label></td>
+                        <td><input name="fname" type="text" style=" border:2px solid black; outline:none" class="btn-outline-light my-3 text-dark btn-lg w-100x"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="font-size:xx-large; margin-right: 4.7%; ">Last Name: </label></td>
+                        <td><input type="text" name="lname" style=" border:2px solid black; outline:none; text-align: left;" class="btn-outline-light my-3 text-dark btn-lg w-100x"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="font-size:xx-large; margin-right: 4.7%; text-align: center;">Email: </label></td>
+                        <td><input type="text" name="email" style=" border:2px solid black; outline:none; text-align: left;" class="btn-outline-light my-3 text-dark btn-lg w-100x"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="font-size:xx-large; margin-right: 4.7%; text-align: center;">Password: </label></td>
+                        <td><input type="password" name="password" style=" border:2px solid black; outline:none; text-align: left;" class="btn-outline-light my-3 text-dark btn-lg w-100x"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="font-size:xx-large; margin-right: 4.7%; text-align: center;">Confirm Password: </label></td>
+                        <td><input type="password" name="confirmpass" style=" border:2px solid black; outline:none; text-align: left;" class="btn-outline-light my-3 text-dark btn-lg w-2100x"><br></td>
+                    </tr>
+                <tr><td><button type="submit" class="btn btn-outline-dark text-center btn-lg m-5 mx-5 w-25">Sign-up</button></td></tr>
+        <hr>
+        div.text-center 
+            h1 OR continue with 
+            <a href='/user/signin'><button class="btn btn-outline-dark m-auto my-3 btn-lg w-50" type="submit">Sign-in</button></a><br>
+            <a><button class="btn btn-outline-primary my-3 btn-lg w-25 disabled">Linkedin</button></a>
+            <a><button class="btn btn-outline-primary my-3 btn-lg w-25 disabled">fb</button></a><br>
+            <a><button class="btn btn-outline-success my-3 btn-lg w-25 disabled">outlook </button></a>
+            <a><button class="btn btn-outline-danger my-3 btn-lg w-25 disabled">Google</button></a>
+        <h3 class="text-center bg-dark text-light m-0 p-3"> Om Duragkar<sup>&copy;</sup> Socians<sup>&reg;</sup></h3> 
+        script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN") 
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous") 
+

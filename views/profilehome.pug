@@ -1,0 +1,104 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= fname +" " + lname+ " | Socians | Home" 
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous")
+        link(rel="stylesheet", href="./css/homestyleuser.css")
+
+    body.bg-light 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" id="sociansnav" href="/">Socians<sup>&reg;</sup></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+                    div.col-md-2
+                        <ul class="navbar-nav sociansearch mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" id="newadd1" aria-current="page" href="/">Code</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item disabled" href="#">Connection </a></li>
+                                    <li><a class="dropdown-item disabled" href="#">Under Construction</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider disabled">
+                                    </li>
+                                    <li><a class="dropdown-item active" href="/rate">Rate Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    //- .me-auto 
+                    <form class="d-flex col-md-5 " action="/find/search" method="POST">
+                        <input class="btn-outline-light sociansform" type="search" placeholder="Search" style="display:inline-block; border-radius:5px; border:none; padding: 10px;" aria-label="Search">
+                        <button class="searchbtn btn btn-outline-success btn-lg w-25" style="display:inline-block" type="submit">Search</button>
+                    </form>
+                    //- </div>
+                    <div class="col-md-5">
+                        a(href="/user/profile").btn.btn-outline-light.buttonsnav.p-2=  "Hello, "+ fname   
+                        //- <a href='/user/profile'><button class="btn btn-outline-light buttonsnav btn-lg"></button></a>
+                        <a href='/user/signout'><button class="btn btn-outline-danger buttonsnav btn-lg">log-out</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        div.row 
+            div.col-md-6
+                h1.mx-5.my-2.header Socians<sup>&reg;</sup> 
+                p.mx-5 website for future developers Community.
+            div.col-md-6
+                <button id="addpostbtn" class="w-50 m-4 text-center my-5 btn btn-outline-success btn-lg ">Add Post </button> 
+                <button id="closepostbtn" class="w-50 m-4 text-center my-5 btn btn-outline-danger btn-lg "> X cancel</button> 
+
+        section.text-center#sectionpostcreate 
+            form(action="/post/create", method="POST") 
+                textarea(name="content", cols="50", rows="5")
+                <br><button class="w-25 m-5 btn btn-outline-success">Post </button> 
+                
+        hr
+        section 
+            each val in content 
+                div.card.text-center.w-50.mx-auto.me-auto.m-3.bg-light
+                    h5.card-title.card-header.text-muted= "Posted by " + val.user.fname + " " +val.user.lname
+                    //- <div class="card-body">
+                    div.card-body
+                        p.card-text= val.content  
+                        div.row.mx-auto.me-auto
+                            <a href="#" class="col-md-4 mx-4 m-2 w-25 btn btn-dark btn-sm">Like </a>
+                            <a class="col-md-4 mx-4 m-2 w-25 btn btn-primary btn-sm opencomments">Comments </a>
+                            <a class="col-md-4 mx-4 m-2 w-25 btn btn-warning btn-sm cancelcommentbtn">Close Comments</a>
+                            <a href="#" class="col-md-4 mx-4 m-2 w-25 btn btn-success btn-sm">Share </a>
+                    div.card-footer.text-muted= "On " + val.updatedAt
+                    div.card-footer.text-muted.commentsection
+                        textarea(name="comment", cols="90", rows="5") 
+                        <a href="#" class="col-md-4 mx-4 m-2 w-25 btn btn-success btn-sm ">Comment</a>
+                        div.row.border.rounded.border-dark.m-4
+                            div.card-body.comments.col-md-7
+                                p.card-text.card-header.muted= val.user.fname 
+                                p.card-text= val.content
+                            div.col-md-5.text-center.my-2
+                                <a href="#" class="col-md-4 m-2 w-25 btn btn-dark text-center btn-sm">Like </a>
+                                <a href="#" class="col-md-4 w-25 btn btn-dark btn-sm text-center">Unlike </a>
+                        hr
+        hr
+        <p class="text-center"><b> Addition to socians sign-in and sign-up space started. Sign-up now to get into the Socians Family.</b></p>
+        div.row
+            <a class="col-sm-4 w-25 m-5 btn btn-outline-primary" href="/user/thanks">Subscribe</a>
+            <a class="col-sm-4 w-25 m-5 btn btn-outline-dark" href="/user/thanks">Twitter</a> 
+            <a class="col-sm-4 w-25 m-5 btn btn-outline-dark" href="/user/thanks">Youtube</a>
+    hr.m-0
+    <h3 class="text-center m-0 p-3 bg-primary text-light"> Om Duragkar<sup>&copy;</sup> Socians<sup>&reg;</sup> 2021</h3> 
+                //- <br><button class="w-75 m-5 btn btn-outline-danger">Post </button> 
+
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN") 
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous") 
+    script(src="./js/profilehome.js") 
+

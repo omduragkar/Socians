@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Socians | Home 
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous")
+        link(rel="stylesheet", href="./css/homestyle.css")
+
+    body.bg-light 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed w-100">
+            <div class="container-fluid">
+                <a class="navbar-brand" id="sociansnav" href="/">Socians<sup>&reg;</sup></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+                    div.col-lg-2
+                        <ul class="navbar-nav sociansearch mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="newadd1" aria-current="page" href="#">Code</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item disabled" href="#">Under Construction</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider disabled">
+                                    </li>
+                                    <li><a class="dropdown-item active" href="/rate">Rate Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    //- .me-auto 
+                    <form class="d-flex col-lg-5 " action="/find/search" method="POST">
+                        <input class="btn-outline-light sociansform" type="search" placeholder="Search" style="display:inline-block; border-radius:5px; border:none; padding: 10px;" aria-label="Search">
+                        <button class="searchbtn btn btn-outline-success btn-lg w-25" style="display:inline-block" type="submit">Search</button>
+                    </form>
+                    //- </div>
+                    <div class="col-lg-5">
+                        <a href='/user/signup'><button class="btn btn-outline-light buttonsnav btn-lg">Sign-up</button></a>
+                        <a href='/user/signin'><button class="btn btn-outline-primary buttonsnav btn-lg">Sign-in</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        h1.text-center.my-5.header Socians<sup>&reg;</sup>
+        p.text-center A website for future developers Community.
+        p.text-center Arriving Soon!!!!!!!!!!!!!! 
+        <p class="text-center"><b> Addition to socians sign-in and sign-up space started. Sign-up now to get into the Socians Family.</b></p>
+        div.text-center 
+            <a href='/user/signup'><button class="btn btn-outline-dark mx-3 btn-lg">Sign-up</button></a>
+            <a href='/user/signin'><button class="btn btn-outline-primary mx-3 btn-lg">Sign-in</button></a>
+        div.row
+            <a class="col-sm-4" href="/user/thanks"><button class="w-75 m-5 btn btn-outline-primary">Subscribe</button></a>
+            <a class="col-sm-4" href="/user/thanks"><button class="w-75 m-5 btn btn-outline-danger">Youtube </button></a> 
+            <a class="col-sm-4" href="/user/thanks"><button class="w-75 m-5 btn btn-outline-dark">Twitter</button></a> 
+    <h3 class="text-center m-0 p-3 footeri bg-primary text-light"> Om Duragkar<sup>&copy;</sup> Socians<sup>&reg;</sup> 2021</h3> 
+
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN") 
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous") 
+
